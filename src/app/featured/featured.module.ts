@@ -7,6 +7,6 @@ import { FeaturedComponent } from './featured.component'
 @NgModule({
   imports: [NativeScriptCommonModule, FeaturedRoutingModule],
   declarations: [FeaturedComponent],
-  schemas: [NO_ERRORS_SCHEMA],
+  schemas: [NO_ERRORS_SCHEMA]
 })
 export class FeaturedModule {}

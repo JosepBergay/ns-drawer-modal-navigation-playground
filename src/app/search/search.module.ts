@@ -7,6 +7,6 @@ import { SearchComponent } from './search.component'
 @NgModule({
   imports: [NativeScriptCommonModule, SearchRoutingModule],
   declarations: [SearchComponent],
-  schemas: [NO_ERRORS_SCHEMA],
+  schemas: [NO_ERRORS_SCHEMA]
 })
 export class SearchModule {}

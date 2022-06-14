@@ -1,0 +1,16 @@
+<ActionBar class="action-bar">
+  <NavigationButton></NavigationButton>
+  <GridLayout columns="50, *">
+    <Label class="action-bar-title" text="SEARCH Details" colSpan="2"></Label>
+  </GridLayout>
+</ActionBar>
+
+<GridLayout class="page__content">
+  <Label class="page__content-icon fas" text="&#xf002;"></Label>
+  <StackLayout class="page__content-placeholder">
+    <Label text="This is details page"></Label>
+    <Label [text]="id$ | async" textWrap="true"></Label>
+    <Button text="go back" (tap)="goBack()"></Button>
+
+  </StackLayout>
+</GridLayout>

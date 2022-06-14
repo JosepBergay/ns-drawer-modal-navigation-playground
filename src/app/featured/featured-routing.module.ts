@@ -4,10 +4,22 @@ import { NativeScriptRouterModule } from '@nativescript/angular'
 
 import { FeaturedComponent } from './featured.component'
 
-const routes: Routes = [{ path: '', component: FeaturedComponent }]
+const routes: Routes = [
+  {
+    path: '',
+    component: FeaturedComponent,
+    children: [
+      {
+        path: 'select',
+        outlet: 'modal',
+        loadChildren: () => import('~/app/select/select.module').then(m => m.SelectModule)
+      }
+    ]
+  }
+]
 
 @NgModule({
   imports: [NativeScriptRouterModule.forChild(routes)],
-  exports: [NativeScriptRouterModule],
+  exports: [NativeScriptRouterModule]
 })
 export class FeaturedRoutingModule {}
